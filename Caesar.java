@@ -23,15 +23,15 @@ public class Caesar implements Cipher {
 		String cipherText = "";
 		for (int i = 0; i < length; i++) {
 			char c = (char) (message.charAt(i));
-			if (c > '@' && c < 'X')
+			if (c > '@' && c < '['-shift)
 				c = (char) (message.charAt(i) + shift);
-			else if (c > '`' && c < 'x')
+			else if (c > '`' && c < '{'-shift)
 				c = (char) (message.charAt(i) + shift);
 			else if (c == ' ')
 				c = ' ';
-			else if (c > 'W' && c < '[') // Needs to wrap around alphabet
+			else if (c >= '['-shift && c < '[') // Needs to wrap around alphabet
 				c = (char) (65 + ((message.charAt(i) - 65) + shift) % 26);
-			else if (c > 'w' && c < '{')
+			else if (c >= '{'-shift && c < '{')
 				c = (char) (97 + ((message.charAt(i) - 97) + shift) % 26);
 			cipherText += c;
 		} // end for
@@ -47,9 +47,9 @@ public class Caesar implements Cipher {
 				c = (char) (message.charAt(i) - shift);
 			else if (c > '`'+shift && c < '{')
 				c = (char) (message.charAt(i) - shift);
-			else if (c > '@' && c < 'D') // Needs to wrap around alphabet
+			else if (c > '@' && c <= '@'+shift) // Needs to wrap around alphabet
 				c = (char) (65 + (26 + (message.charAt(i) - 65) - shift));
-			else if (c > '`' && c < 'd')
+			else if (c > '`' && c <= '`'+shift)
 				c = (char) (65 + (26 + (message.charAt(i) - 65) - shift));
 
 			plainText += c;
@@ -85,7 +85,7 @@ public class Caesar implements Cipher {
 		this.preserveCapitals = !this.preserveCapitals;
 	}// end togglePreserveCapitals
 	public void setShift(int shift){
-		this.shift = shift;
+		this.shift = shift%26;
 	}//end setShift
 	public int getShift(){
 		return this.shift;
