@@ -72,6 +72,8 @@ public class CaeserCipherDriverGui {
 			public void actionPerformed(ActionEvent arg0) {
 				cipher.setMessage(txtMessage.getText());
 				try {
+					if((Integer)spinner.getValue() > 26)
+						spinner.setValue((Integer)spinner.getValue()%26);
 					spinner.commitEdit();
 				} catch (ParseException e) {
 					e.printStackTrace();
@@ -88,9 +90,10 @@ public class CaeserCipherDriverGui {
 			public void actionPerformed(ActionEvent e) {
 				cipher.setMessage(txtMessage.getText());
 				try {
+					if((Integer)spinner.getValue() > 26)
+						spinner.setValue((Integer)spinner.getValue()%26);
 					spinner.commitEdit();
 				} catch (ParseException e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
 				cipher.setShift((Integer)spinner.getValue());

@@ -90,4 +90,4 @@ public class Caesar implements Cipher {
 	public int getShift(){
 		return this.shift;
 	}// end getShift
-}
+}//EOF
