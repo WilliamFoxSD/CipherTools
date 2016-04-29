@@ -16,6 +16,12 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JSpinner;
 import javax.swing.JLabel;
 
+/**
+ * Basic Gui for CaeserCipher.java
+ * 
+ * @author ruberVulpes
+ *
+ */
 public class CaeserCipherDriverGui {
 
 	private JFrame frame;
