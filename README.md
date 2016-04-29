@@ -1,6 +1,7 @@
 # CipherTools
-Some basic cipher classes and apps
+* Some basic cipher classes and apps
 
-## In Progress
-  Gui for Frequency Analysis
-  Website for project
+#### In Progress
+ * Gui for Frequency Analysis
+  
+ * Website for project
