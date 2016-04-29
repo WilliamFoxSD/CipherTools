@@ -51,7 +51,7 @@ public class CaeserCipherDriverGui {
 	 */
 	private void initialize() {
 		Caesar cipher = new Caesar();
-		frame = new JFrame("William Fox Caeser Encoder and Decoder");
+		frame = new JFrame("Cipher: Caeser Encoder and Decoder");
 		frame.setBounds(100, 100, 753, 269);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
