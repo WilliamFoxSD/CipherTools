@@ -11,7 +11,7 @@ public interface Cipher {
 	/**
 	 * Sets the message to be encoded or decoded
 	 * 
-	 * @param message
+	 * @param message Message to be encoded/decoded
 	 */
 	public void setMessage(String message);
 
@@ -42,8 +42,12 @@ public interface Cipher {
 	/**
 	 * Sets the isPreserveCapitals flag
 	 * 
-	 * @param preserveCapitals
+	 * @param preserveCapitals Flag to preserve capitalization
 	 */
 	public void setPreserveCapitals(boolean preserveCapitals);
-
+	
+	/**
+	 * Toggles the isPreserveCapitals flag
+	 */
+	public void togglePreserveCapitals();
 }// Eof

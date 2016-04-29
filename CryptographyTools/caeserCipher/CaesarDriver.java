@@ -1,5 +1,10 @@
 package caeserCipher;
 
+/**
+ * Basic driver class for Caesar.java
+ * @author ruberVulpes
+ *
+ */
 public class CaesarDriver {
 
 	public static void main(String args[]) {
